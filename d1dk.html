@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+    <link rel="stylesheet" href="d1dk.css">
+</head>
+<body>
+    <div class="container-register">
+        <form id="register">
+            <h2>Đăng Ký</h2>
+            <input type="text" id="new-username" placeholder="Tên đăng nhập">
+            <input type="password" id="new-password" placeholder="Mật khẩu">
+            <button type="submit">Đăng Ký</button>
+               
+        </form>
+        
+
+    </div>
+ <script>
+     window.addEventListener('load', function () {
+      document.body.classList.add('fade-in');
+    });
+
+    // Xử lý form đăng ký
+    document.getElementById('register').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const username = document.getElementById('new-username').value.trim();
+      const password = document.getElementById('new-password').value.trim();
+
+      if (!username && !password) {
+        alert('Xin vui lòng điền thông tin');
+      } else if (!username) {
+        alert('Xin vui lòng điền tên');
+      } else if (!password) {
+        alert('Xin vui lòng nhập mật khẩu');
+      } else {
+        alert('Đăng ký thành công!');
+      }
+    });
+  </script>
+    
+    
+</body>
+</html>
